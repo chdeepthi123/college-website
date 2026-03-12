@@ -1,0 +1,537 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+}
+
+/* 2. Header & Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo h2 {
+    color: #4b2ca0;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+}
+
+nav ul li:hover {
+    color: #4b2ca0;
+}
+
+/* 3. Main Section (Flexbox Layout) */
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    align-items: stretch; /* This ensures the slider and form are the same height */
+}
+
+/* 4. Slider Styles (Updated to Flex) */
+.slider {
+    width: 70%;
+    display: flex; /* Changed from grid to flex for better control */
+    gap: 15px;
+}
+
+.slider img {
+    flex: 1; /* Forces both images to share space equally */
+    width: 0; 
+    height: 100%; 
+    min-height: 450px; /* Keeps the height consistent with the form */
+    object-fit: cover; /* Keeps images clear and undistorted */
+    border-radius: 10px;
+}
+
+/* 5. Admission Form Styles */
+.form {
+    width: 30%;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #0a3c75;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: #0a3c75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form button:hover {
+    background: #062b55;
+}
+
+
+/* SCROLLING BAR */
+
+.scrolling-bar{
+background:#4b2ca0;
+color:white;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.scrolling-text{
+display:inline-block;
+padding:10px 0;
+animation:scroll 15s linear infinite;
+}
+
+.scrolling-text span{
+margin-right:40px;
+font-weight:600;
+}
+
+@keyframes scroll{
+from{transform:translateX(100%)}
+to{transform:translateX(-100%)}
+}
+
+/* EVENTS SECTION */
+
+
+
+.events {
+    display: flex;               
+    justify-content: center;     
+    align-items: stretch;       
+    gap: 30px;      
+    padding: 60px 40px;
+    background-color: #f8f9fb;
+}
+
+.event-card {
+    flex: 1;                     
+    max-width: 320px;           
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;         
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;           
+}
+
+
+.event-card .event-title {
+    background: #87ceeb;         
+    color: #0a3c75;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;           
+    border-radius: 10px;
+}
+
+/* Color variations matching the screenshot */
+.purple {
+    background: #6a1b9a !important; /* Deep Purple */
+    color: white;
+}
+
+.blue {
+    background: #00bcd4 !important; /* Teal/Cyan Blue from image */
+    color: white;
+}
+
+/* Text styling inside color cards */
+.event-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+
+
+
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    padding: 80px 40px; /* Increased padding for a cleaner look */
+    background: white;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    gap: 60px; /* Increased gap to balance the larger image */
+    max-width: 1200px; /* Keeps content from stretching too wide on big screens */
+    margin: 0 auto;
+}
+
+.welcome-text {
+    flex: 1.2; /* Gives the text slightly more priority but allows image growth */
+}
+
+/* IMAGE UPDATES START HERE */
+.welcome-image {
+    flex: 1; /* Ensures the image container takes up its fair share of space */
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-image img {
+    width: 100%;       /* Sets it to fill its container */
+    max-width: 550px;  /* INCREASED from 400px to make it larger */
+    height: auto;      /* Maintains aspect ratio */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Added shadow to match your screenshot style */
+}
+/* IMAGE UPDATES END HERE */
+
+.welcome-text h1 {
+    color: #6a2fbf;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.welcome-text h2 {
+    color: #0a3c75;
+    margin-bottom: 20px;
+    font-size: 2.2rem; /* Made slightly larger for impact */
+}
+
+.welcome-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.explore-btn {
+    background: #0a3c75;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #062b55;
+    transform: translateY(-2px);
+}
+
+
+
+/* COURSES */
+
+
+.courses {
+    padding: 60px 40px;
+    background: off whitesmoke;
+}
+
+/* Headings changed to Red and Bold like your screenshot */
+.course-heading {
+    text-align: center;
+    color: #cc0000; 
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; /* Allows cards to wrap on mobile */
+}
+
+.course-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px; /* Slightly wider to match your image */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* THE ALIGNMENT FIX: Keeps titles level and images in a straight line */
+.course-card h3 {
+    color: #cc0000; /* Red course titles */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    min-height: 50px; /* FORCES ALL TITLES TO TAKE SAME VERTICAL SPACE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.course-card img {
+    width: 100%;
+    height: 170px; /* Forces all images to be the same height */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #f0f0f0;
+}
+
+/* Button: Bright Blue like your reference image */
+.course-card button {
+    background: #007bff; 
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.course-card button:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+/* IMPORTANT INFORMATION */
+
+.important-section{
+padding:60px 40px;
+background:white;
+}
+
+.important-title{
+text-align:center;
+color:#0a3c75;
+margin-bottom:30px;
+}
+
+.important-container{
+display:flex;
+gap:30px;
+}
+
+.important-menu{
+width:200px;
+}
+
+.menu-item{
+background:#eee;
+padding:12px;
+margin-bottom:10px;
+cursor:pointer;
+border-radius:5px;
+}
+
+.menu-item.active{
+background:#0a3c75;
+color:white;
+}
+
+.important-content{
+flex:1;
+background:#f9f9f9;
+padding:20px;
+border-radius:10px;
+}
+
+.notification-card{
+background:white;
+padding:15px;
+margin-top:10px;
+border-left:4px solid #6a2fbf;
+}
+
+
+
+
+
+
+/* SOCIETY SECTION */
+
+.society-container{
+padding:60px 40px;
+background:#f5f7fa;
+}
+
+.main-title{
+text-align:center;
+color:#0a3c75;
+margin-bottom:30px;
+}
+
+.society-content{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.society-logo{
+width:120px;
+}
+
+.description-section p{
+line-height:1.6;
+margin-bottom:15px;
+}
+
+.btn-read-more{
+background:#0a3c75;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+background-color: #f8f9fb;
+}
+
+
+
+
+
+/* PRINCIPAL PROFILE */
+
+
+
+
+
+
+
+.management-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin:60px auto;
+    padding:20px;
+}
+
+.principal-profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #f5f7fa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 450px;
+}
+
+.round-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    color: #0a3c75;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.designation {
+    color: #6a2fbf;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.institution {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Styled Read More Link */
+.underline-link a {
+    text-decoration: none;
+    color: #0a3c75;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.underline-link a:hover {
+    color: #6a2fbf;
+    border-bottom: 2px solid #6a2fbf;
+}
+
+
+
+
+
+ 
+
